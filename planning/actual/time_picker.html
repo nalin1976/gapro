@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>NoGray Time Picker</title>
+
+<script language="javascript" src="time_picker_files/mootools.v1.11.js"></script>
+<script language="javascript" src="time_picker_files/nogray_time_picker_min.js"></script>
+<script language="javascript">
+	window.addEvent("domready", function (){
+		
+		var tp2 = new TimePicker('time2_picker', 'time2', 'time2_toggler', {format24:true});
+		
+	});
+</script>
+
+<style>
+	* {font-family:Arial, Helvetica, sans-serif;
+		font-size:9pt;}
+		
+	/* table list */
+	.table_list {border-collapse:collapse;
+		border:solid #cccccc 1px;
+		width:100%;}
+	
+	.table_list td {padding:5px;
+		border:solid #efefef 1px;}
+	
+	.table_list th {background:#75b2d1;
+		padding:5px;
+		color:#ffffff;}
+	
+	.table_list tr.odd {background:#e1eff5;}
+	
+	.time_picker_div {padding:5px;
+		border:solid #999999 1px;
+		background:#ffffff;}
+		
+</style>
+</head>
+<body>
+
+
+
+
+
+24 hour format:<br />
+<input type="text" name="time2" id="time2" /> <a href="#" id="time2_toggler">Open time picker</a>
+<div id="time2_picker" class="time_picker_div"></div>
+
+
+
+</center>
+</body>
+</html>

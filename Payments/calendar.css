@@ -1,0 +1,30 @@
+#calendartable {
+	background-color:#CCFFFF;
+	padding: 0.25em;
+	border:solid #FF0033 2px;
+	text-align: center;
+	font-size: 0.9em;
+	font:Verdana;
+}
+#calendartable td a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color:#660099;
+	font:Verdana;
+}
+#calendartable td a:hover {
+	background-color: yellow;
+	font:Verdana;
+}
+.yestext {
+	font:Verdana;
+	border:#FB9957 1px solid ;
+	width: 1.5em;
+	height: 1.25em;
+}
+.notext {
+	height: 1.25em;
+	font:Verdana;
+}

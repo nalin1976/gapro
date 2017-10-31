@@ -1,0 +1,35 @@
+<Company>
+	<Name>
+		<CompanyName>Orit Trading Lanka (Pvt)Ltd.</CompanyName>
+	</Name>
+	<Address>
+		<AddressLine1>07-02 East Tower</AddressLine1>		
+		<AddressLine2>Echelon Square</AddressLine2>	
+		<Street>World Trade Centre</Street>
+		<City>Colombo 01</City>
+		<Country>Sri Lanka</Country>
+		<Telephone>+94 11 2346370</Telephone>
+		<Fax>+94 11 2346376</Fax>
+		<Email>info@oritsl.com</Email>
+		<Web>www.oritsl.com</Web>
+		<VatRegNo>1146448043-700</VatRegNo>
+		<TQBRegNo>TQB/BTH/01113</TQBRegNo>
+	</Address>
+	
+	<NameT>
+		<CompanyNameT>Orit Apparels Lanka (Pvt)Ltd.</CompanyNameT>
+	</NameT>
+	<AddressT>
+		<AddressLine1T>07-02 East Tower</AddressLine1T>		
+		<AddressLine2T>Echelon Square</AddressLine2T>	
+		<StreetT>World Trade Centre</StreetT>
+		<CityT>Colombo 01</CityT>
+		<CountryT>Sri Lanka</CountryT>
+		<TelephoneT>+94 11 2346370</TelephoneT>
+		<FaxT>+94 11 2346376</FaxT>
+		<EmailT>info@oritsl.com</EmailT>
+		<WebT>www.oritsl.com</WebT>
+		<VatRegNoT>1146448043-700</VatRegNoT>
+		<TQBRegNoT>TQB/BTH/01113</TQBRegNoT>
+	</AddressT>
+</Company>

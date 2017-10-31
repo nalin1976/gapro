@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart palette="2" caption="&nbsp;" showLabels="1" showvalues="0"  numberPrefix="PCS" showSum="1" decimals="0" useRoundEdges="1" legendBorderAlpha="0">
+<categories>
+<category label="Line 1" />
+<category label="Line 2" />
+<category label="Line 3" />
+<category label="Line 4" />
+<category label="Line 5" />
+<category label="Line 5" />
+</categories>
+<dataset seriesName="Actual" color="66CC00" showValues="0">
+<set value="25601.34" />
+<set value="20148.82" />
+<set value="17372.76" />
+<set value="35407.15" />
+<set value="38105.68" />
+<set value="38105.68" />
+</dataset>
+<dataset seriesName="Planned" color="F6BD0F" showValues="0">
+<set value="57401.85" />
+<set value="41941.19" />
+<set value="45263.37" />
+<set value="117320.16" />
+<set value="114845.27" />
+<set value="114845.27" />
+</dataset>
+</chart>

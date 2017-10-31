@@ -1,0 +1,240 @@
+<?php 
+
+	session_start();
+	include "../../Connector.php";	
+	$backwardseperator 	= "../../";	
+	$serial 	= $_GET["req"];
+	$serialn = explode('/',$serial);
+
+
+	$str_header="SELECT 
+				wf.intYear,
+			wf.dblGPNo,
+			wf.dtmDate,
+			wf.strColor,
+			wf.intStyleId,
+			wf.intSFactory,
+			wf.intToFactory,
+			wf.strVehicleNo,
+			wf.intCompanyId,
+			orders.strOrderNo,	
+			orders.strStyle,
+			wf.strRemarks,
+			wf.dblQty,
+			wf.intUser,
+			was_washformula.strProcessName,
+			wf.intStatus,wf.inrConfirmedBy
+			FROM
+			was_issuedtootherfactory AS wf
+			INNER JOIN orders ON wf.intStyleId = orders.intStyleId
+			LEFT JOIN was_washformula ON wf.intReason = was_washformula.intSerialNo
+			WHERE
+			wf.intYear AND wf.dblGPNo='".$serialn[1]."' and wf.intYear='".$serialn[0]."';";
+
+$res=$db->RunQuery($str_header);
+$row=mysql_fetch_array($res);
+
+	$userId	= $row['intUser'];
+	$report_companyId  = $row["intCompanyId"];
+	$status= $row['intStatus'];
+	$Confirm=$row['inrConfirmedBy'];
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="../../css/erpstyle.css" rel="stylesheet" type="text/css" />
+<title>Gate Pass</title>
+<style type="text/css">
+td{
+ font-size:140%;
+}
+
+</style>
+</head>
+<body>
+<?php
+$sqlf="select CO.strName,CO.strAddress1,CO.strAddress2,CO.strStreet,CO.strCity,C.strCountry,CO.strZipCode,CO.strPhone,CO.strFax from companies CO
+inner join country C on CO.intCountry=C.intConID where CO.intCompanyID='".$row['intCompanyId']."';";
+$resultf=$db->RunQuery($sqlf);
+while($rowf=mysql_fetch_array($resultf))
+{
+	$f_name = $rowf["strName"];
+	$f_name .= ($rowf["strAddress1"]=='' ? '':'<br/>'.$rowf["strAddress1"]);
+	$f_name .= ($rowf["strAddress2"]=='' ? '':'<br/>'.$rowf["strAddress2"]);
+	$f_name .= ($rowf["strStreet"]=='' ? '':'<br/>'.$rowf["strStreet"]);
+	$f_name .= ($rowf["strCity"]=='' ? '':'<br/>'.$rowf["strCity"]);
+	$f_name .= ($rowf["strCountry"]=='' ? '':'<br/>'.$rowf["strCountry"]);
+	$f_name .= ($rowf["strPhone"]=='' ? '':'<br/>TEL : '.$rowf["strPhone"]);
+	$f_name .= ($rowf["strFax"]=='' ? '':'<br/>FAX : '.$rowf["strFax"]);
+	$from_city	= $rowf["strCity"];
+}
+
+$sqlt="select CO.strName,CO.strAddress1,CO.strAddress2,CO.strStreet,CO.strCity,C.strCountry,CO.strZipCode,CO.strPhone,CO.strFax from companies CO
+inner join country C on CO.intCountry=C.intConID where CO.intCompanyID='".$row['intToFactory']."';";
+$resultt=$db->RunQuery($sqlt);
+while($rowt=mysql_fetch_array($resultt))
+{
+	$t_name  = $rowt["strName"];
+	$t_name .= ($rowt["strAddress1"]=='' ? '':'<br/>'.$rowt["strAddress1"]);
+	$t_name .= ($rowt["strAddress2"]=='' ? '':'<br/>'.$rowt["strAddress2"]);
+	$t_name .= ($rowt["strStreet"]=='' ? '':'<br/>'.$rowt["strStreet"]);
+	$t_name .= ($rowt["strCity"]=='' ? '':'<br/>'.$rowt["strCity"]);
+	$t_name .= ($rowt["strCountry"]=='' ? '':'<br/>'.$rowt["strCountry"]);
+	$t_name .= ($rowt["strPhone"]=='' ? '':'<br/>TEL : '.$rowt["strPhone"]);
+	$t_name .= ($rowt["strFax"]=='' ? '':'<br/>FAX : '.$rowt["strFax"]);
+	
+	
+}
+?>
+<table width="850" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td  class="head2">ORIT APPARELS LANKA (PVT)LTD.</td>
+  </tr>
+  <tr>
+    <td  class="normalfntSubHeader">GATE PASS -(Lot/Bulk Wise)</td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="30%" class="border-All"><strong>&nbsp;Wash Ready - <?php echo getWashReadyComapny($row['intSFactory']);?></strong></td>
+        <td width="40%">&nbsp;</td>
+        <td width="30%" class="border-All"><strong>&nbsp;GatePass No : <?php echo $serial ?></strong></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="border-bottom">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="2" class="normalfnt" >
+      <tr>
+        <td valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td valign="top">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top"><strong>Deliver From</strong></td>
+        <td><?php echo $f_name;?></td>
+        <td valign="top"><strong>Deliver To</strong></td>
+        <td><?php echo $t_name;?></td>
+      </tr>
+      <tr>
+        <td><strong>Vehicle No</strong></td>
+        <td><?php echo $row['strVehicleNo'];?></td>
+        <td><strong>GatePass Date</strong></td>
+        <td><?php echo $row['dtmDate'];?></td>
+      </tr>
+      <tr>
+        <td><strong>Reason</strong></td>
+        <td><?php echo $row['strProcessName'];?></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="15%">&nbsp;</td>
+        <td width="35%">&nbsp;</td>
+        <td width="15%">&nbsp;</td>
+        <td width="35%">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="15%" height="25" class="border-Left-Top-right" style="text-align:center;font-size:15px;"><strong>PO No.</strong></td>
+    <td width="15%" class="border-top-right" style="text-align:center;font-size:15px;"><strong>Style No</strong></td>
+    <td width="15%" class="border-top-right" style="text-align:center;font-size:15px;"><strong>Color</strong></td>
+    <td width="15%" class="border-top-right" style="text-align:center;font-size:15px;"><strong>Division</strong></td>
+    <td width="30%" class="border-top-right" style="text-align:center;font-size:15px;"><strong>Description of Articles</strong></td>
+    <td width="10%" class="border-top-right" style="text-align:center;font-size:15px;"><strong>Quantity</strong></td>
+  </tr>
+  <tr style="font-size:15px;">
+    <td height="26" class="border-Left-Top-right-fntsize12" style="text-align:center;font-size:15px;"><?php echo $row['strOrderNo'];?></td>
+    <td class="border-top-right-fntsize12" style="text-align:center;font-size:15px;"><?php echo $row['strStyle'];?></td>
+    <td class="border-top-right-fntsize12" style="text-align:center;font-size:15px;"><?php echo $row['strColor'];?></td>
+    <td class="border-top-right-fntsize12" style="text-align:center;font-size:15px;"><?php echo GetDivision($row['intStyleId']);?></td>
+    <td class="border-top-right-fntsize12" style="text-align:right;font-size:15px;"><?php echo $row['strRemarks'];?></td>
+    <td class="border-top-right-fntsize12" style="text-align:right;font-size:15px;"><?php echo $row['dblQty'];?></td>
+  </tr>
+  <tr>
+    <td colspan="6" class="border-top">&nbsp;</td>
+    </tr>
+</table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellpadding="0" cellspacing="3" class="normalfntMid">
+      <tr height="10"></tr>
+      <tr>
+        <td width="25%" class="bcgl1txt1" height="25" style="text-align:center;font-size:15px;"><?php echo getUser($userId);?></td>
+        <td width="25%" class="bcgl1txt1" style="text-align:center;font-size:15px;"><?php echo getUser($Confirm);?></td>
+        <td width="25%" class="bcgl1txt1">&nbsp;</td>
+        <td width="25%" class="bcgl1txt1">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="repo">Prepared by</td>
+        <td class="reportBottom">Authorized By</td>
+        <td class="reportBottom">Delivered By</td>
+        <td class="reportBottom">Signature</td>
+      </tr>
+      <tr>
+        <td width="25%" class="bcgl1txt1" height="25" style="text-align:center;font-size:15px;"><?php echo $row['dtmDate'];?></td>
+        <td width="25%" class="bcgl1txt1">&nbsp;</td>
+        <td width="25%" class="bcgl1txt1">&nbsp;</td>
+        <td width="25%" class="bcgl1txt1">&nbsp;</td>
+      </tr>
+      <tr>
+        <td class="reportBottom">Date</td>
+        <td class="reportBottom">Time Out</td>
+        <td class="reportBottom">Time In</td>
+        <td class="reportBottom">Signature Security</td>
+      </tr>
+      <tr>
+        <td class="normalfntMid" height="25">&nbsp;</td>
+        <td class="bcgl1txt1">&nbsp;</td>
+        <td class="bcgl1txt1" style="text-align:center;font-size:15px;"><?php echo $row['strVehicleNo'];?></td>
+        <td class="normalfntMid">&nbsp;</td>
+      </tr>
+      <tr>
+        <td >&nbsp;</td>
+        <td class="reportBottom">No Of Packages </td>
+        <td class="reportBottom">Vehical No </td>
+        <td >&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
+<?php
+function getWashReadyComapny($ComId)
+{
+global $db;
+	$sql="select c.strCity from companies c where c.intCompanyID='$ComId'";
+	$result=$db->RunQuery($sql);
+	$row=mysql_fetch_array($result);
+	return $row["strCity"];
+
+}
+function GetDivision($styleId)
+{
+global $db;
+	$sql="select distinct BD.strDivision from orders O inner join buyerdivisions BD on BD.intDivisionId=O.intDivisionId where O.intStyleId='$styleId'";
+	$result=$db->RunQuery($sql);
+	while($row=mysql_fetch_array($result))
+	{
+		return $row["strDivision"];
+	}
+}
+function getUser($uId){
+	global $db;
+	$sql="SELECT useraccounts.Name FROM useraccounts WHERE useraccounts.intUserID='$uId'";
+	$result=$db->RunQuery($sql);
+	$row=mysql_fetch_array($result);
+	return $row["Name"];
+}
+?>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<configurations>
+	<companySettings>
+		<NetworkName>califolinklogistics.com</NetworkName>
+		<Declarant>ORIT TRADING LANKA (PVT) LTD.</Declarant>
+		<Address>07-02 EAST TOWER, WORLD TRADE CENTRE </Address>
+		<City>ECHELON SQUARE, COLOMBO 01, SRI LANKA</City>
+		<phone>94-1-2346370-5</phone>
+		<Fax>94-1-2346376</Fax>
+		<bisreg>PV 64804</bisreg>
+		<Email> Califo_logistics@jinadasa.com</Email>
+		<Website>www.jinadasa.com</Website>
+		<Country>SRI LANKA</Country>
+		<CountryCode>LK</CountryCode>
+		<Vat>1040797417000</Vat>
+		<TinNo>114316598-7000</TinNo>
+		<DeclarantsSequenceNo>307/24/04/92</DeclarantsSequenceNo>
+	</companySettings>
+	<importCusdec>
+		<ADNO_Boi>141,741,380.640</ADNO_Boi>
+		<ADNO_Genaral>141/520/760/380/934/935/465</ADNO_Genaral>
+	</importCusdec>
+</configurations>

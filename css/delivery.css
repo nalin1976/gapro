@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header_format{	font-family:"Courier New", Courier, monospace; 
+				font-size:12px; 
+				border-top:#CCC thin solid; 
+				border-left:#CCC thin solid; 
+				border-bottom:#CCC thin solid;
+				font-weight:bold;
+				color:#FFFFFF;
+				background-color:#0099CC; width:60px;}
+				
+.header_format_cd{	font-family:"Courier New", Courier, monospace; 
+				font-size:12px; 
+				border-top:#CCC thin solid; 
+				border-left:#CCC thin solid; 
+				border-bottom:#CCC thin solid;
+				font-weight:bold;
+				color:#FFFFFF;
+				background-color:#0099CC; white-space:normal;}
+				
+.line_format{font-family:Arial, Helvetica, sans-serif;
+			 font-size:10px; 			 
+			 border-left:#CCC thin solid; 
+			 border-bottom:#CCC thin solid;}
+

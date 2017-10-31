@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+.panelMenuDiv {
+   display:none;
+   position:absolute;
+   left:0px;
+   top:-3px;
+   width:100%;
+}
+
+.panelMenuFnt {
+	font-family: Verdana;
+	font-size: 11px;
+	color:#000000;
+	margin:0px;
+	font-weight: normal;
+	text-align: center;
+}
+
+.bgMenuPanel {
+	background-image:url(../images/bgMenuPanel.png);
+	background-repeat:no-repeat;
+	cursor: pointer;	
+}
+
+.bgMenuPanel:hover {
+    background-image:url(../images/bgMenuPanelOn.png);
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+
+.mainPanelDiv {
+   display:none;
+   position:absolute;
+   left:0px;
+   top:0px;
+   width:100%;
+   opacity:0.4;
+   /*height:100%;*/
+   /*border:1px solid #000000;*/
+}
+
+.subPanelDiv {
+   display:none;
+   left:0px;
+   top:0px;
+   /*border:1px solid #000000;*/
+}
+
+.mainPanelTable {
+   border: 1px solid #FAD163; 
+   border-radius:10px;
+   background:#FFFFD2;
+   filter:alpha(opacity=95);
+   opacity:0.95;
+   box-shadow: 1px 1px 8px #999999;
+}
+
+.fieldsetPnl{
+		 border: 1px solid #FAD163; 
+		-moz-border-radius-bottomleft:4px;  
+      	-moz-border-radius-bottomright:4px;  
+      	-moz-border-radius-topleft:4px;  
+      	-moz-border-radius-topright:4px;  
+       	 border-radius:4px;
+		 background:#FFFFFF;
+}
+
+.lengendfntPnl{
+	font-family: Verdana;
+	font-size: 11px;
+	color: #FFFFFF;
+	margin: 0px;	
+	text-align:left;
+	border: 1px solid #FAD163;
+	border-radius:4px;
+	background:#FCA20A;
+}
+
+.gridHdrTxtPnlMn {
+		font-family: Verdana;
+		font-size: 11px;
+		color: #550000;
+		font-weight:bold;
+		margin: 0px;		
+		text-align: center;
+}
+.gridHdrTxtPnl {
+		font-family: Verdana;
+		font-size: 11px;
+		color: #550000;
+		margin: 0px;		
+		text-align: center;
+}
+.gridbodyTxtPnl {
+		font-family: Verdana;
+		font-size: 11px;
+		color: #550000;
+		margin: 0px;		
+		text-align: center;
+}
+.xxx{
+animation: myfirst 5s;	
+}
+
+@keyframes myfirst
+{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+
+
+#mainPanelDiv
+{
+padding:0px;
+display:none;
+}

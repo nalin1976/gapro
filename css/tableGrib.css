@@ -1,0 +1,22 @@
+.transGrid {
+	border:1px solid #ffffff;
+	border-collapse:collapse;
+}
+
+.transGrid thead tr {
+	font-family: Verdana;
+	font-size: 11px;
+	color: #686d50;
+	margin: 0px;
+	font-weight: normal;
+	text-align:center;	
+}
+
+.transGrid tbody tr {
+	font-family: Verdana;
+	font-size: 11px;
+	color: #85887f;
+	margin: 0px;
+	font-weight: normal;
+	text-align:center;
+}

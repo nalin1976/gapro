@@ -1,0 +1,35 @@
+<html>
+  <head> 
+  <link href="../../css/erpstyle.css" rel="stylesheet" type="text/css" />       
+    <title>My First chart using FusionCharts</title>    
+   
+    <script type="text/javascript" src="FusionCharts.js">
+    </script>
+  </head>   
+  <body>     
+    <div id="chartContainer">FusionCharts will load here!</div>
+<div  style="z-index:25; position:absolute; left:9px; top:9px; width:233px; height:19px;"  >
+    <table width="100%" border="0" cellspacing="1" cellpadding="2" bgcolor="#FFFFFF">
+      <tr>
+        <td width="87%"><table width="100%" height="20" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="308" nowrap="nowrap" class="normalfnt_size12"><strong> PRODUCTION LINE MONITOR</strong></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+  </div>
+<script type="text/javascript"><!--         
+
+      var myChart = new FusionCharts( "StackedColumn2D.swf", 
+      "myChartId", "100%", "100%", "0", "1" );
+      myChart.setXMLUrl("data.xml");
+      myChart.render("chartContainer");
+      
+    // -->     
+    </script>
+  </body> 
+   <script type="text/javascript">
+	 setTimeout('location.reload()',50000);
+    </script>
+</html>

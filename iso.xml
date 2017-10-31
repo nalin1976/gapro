@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ISOStandards>
+	<ISOCodes>
+		<StylePOReport>PU/F1</StylePOReport>
+		<StyleBulkPOReport>PU/F1</StyleBulkPOReport>
+		<CostSheetReport>CDP/F1</CostSheetReport>
+		<BOMReport>MC/F2</BOMReport>
+		<GeneralPOReport>PU/F1</GeneralPOReport>
+		<StyleGRNReport>ST/F14</StyleGRNReport>
+		<StyleMRNReport>ST/F3</StyleMRNReport>
+		<StyleIssueReport>ST/F11</StyleIssueReport>
+		<GeneralGRNReport>ST/F13</GeneralGRNReport>
+		<GeneralMRNReport>ST/F4</GeneralMRNReport>
+		<GeneralIssueReport>ST/F12</GeneralIssueReport>
+		<StyleGatePassReport>ST/F8</StyleGatePassReport>
+		<GeneralGatePassReport>ST/F10</GeneralGatePassReport>
+	</ISOCodes>
+</ISOStandards>

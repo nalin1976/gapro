@@ -1,0 +1,53 @@
+.textInLeft {
+	text-align: left;
+	font-style: '"Courier New", Courier, monospace';
+	font-size: 10pt;
+}
+.textHeader {
+	font-weight: bold;
+}
+.textInRight {
+	text-align: right;
+	font-style: '"Courier New", Courier, monospace';
+	font-size: 10pt;
+}
+.fullBorder {
+	border-width: 1px;
+	border-style: solid;
+}
+.topBorder {
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+.rightBorder {
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+.bottomBorder {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+.leftBorder {
+	border-left-width: 1px;
+	border-left-style: solid;
+}
+.headerBackground {
+	background-color: #FFD3A8;
+}
+.consolidateBackground {
+	background-color: #BCDEDE;
+}
+.minusHighlight {
+	color: #F00;
+}
+.valHighlight {
+	background-color: #C4FFC4;
+}
+.valBalRow {
+	background-color: #FFFFC6;
+}
+.reportHeader {
+	text-align: left;
+	font-style: '"Courier New", Courier, monospace';
+	font-size: 14pt;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sticky Footer | onlyWebPro.com</title>
+<link rel="stylesheet" type="text/css" href="printPr.css" media="print" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<style>
+#wrapper {
+	margin: 0 auto;
+	width: 940px;
+}
+
+#footer {
+	background: #000;
+	color: #fff;
+	height: 100px;
+	text-align: center;
+	width: 940px;
+}
+</style>
+
+<script type="text/javascript">
+//Execute the function when window load
+$(window).bind("load", function() { 
+
+	   //setup the height and position for your sticky footer
+        	footerHeight = 0,
+           footerTop = 0,
+           $footer = $("#footer");
+
+       positionFooter();
+
+       function positionFooter() {
+
+                footerHeight = $footer.height();
+                footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
+
+               if ( ($(document.body).height()+footerHeight) < $(window).height()) {
+                   $footer.css({
+                        position: "absolute"
+                   }).animate({
+                        top: footerTop
+                   })
+               } else {
+                   $footer.css({
+                        position: "static"
+                   })
+               }
+
+       }
+
+       $(window)
+               .scroll(positionFooter)
+               .resize(positionFooter)
+
+})
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+<div id="content">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at lectus in neque pretium vestibulum ac ac sem. Mauris sodales, lacus ut posuere laoreet, mauris neque molestie elit, congue luctus odio tortor vitae tellus. Nulla nisl erat, accumsan vel rhoncus non, posuere non urna. Donec sit amet tempor turpis. Aenean augue ipsum, varius a porttitor eget, congue rhoncus arcu. Mauris elit ligula, ornare vel laoreet et, auctor sit amet mauris. Morbi pretium tellus sed metus ullamcorper quis consectetur lorem vestibulum. Sed ut elit nisi. Vestibulum id purus mi, eu malesuada nisl. Sed dictum, neque at fringilla pulvinar, metus neque suscipit velit, non cursus urna dui a diam. Ut quam mauris, feugiat id aliquam et, dapibus in mauris. Nunc risus mi, egestas sit amet rutrum et, viverra eget augue. Nunc facilisis dictum risus, et facilisis ligula rhoncus nec. Aliquam a augue sit amet sapien pulvinar luctus consectetur et tellus. Fusce ornare orci non augue semper condimentum. Pellentesque felis elit, ullamcorper gravida adipiscing sed, sollicitudin nec odio.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at lectus in neque pretium vestibulum ac ac sem. Mauris sodales, lacus ut posuere laoreet, mauris neque molestie elit, congue luctus odio tortor vitae tellus. Nulla nisl erat, accumsan vel rhoncus non, posuere non urna. Donec sit amet tempor turpis. Aenean augue ipsum, varius a porttitor eget, congue rhoncus arcu. Mauris elit ligula, ornare vel laoreet et, auctor sit amet mauris. Morbi pretium tellus sed metus ullamcorper quis consectetur lorem vestibulum. Sed ut elit nisi. Vestibulum id purus mi, eu malesuada nisl. Sed dictum, neque at fringilla pulvinar, metus neque suscipit velit, non cursus urna dui a diam. Ut quam mauris, feugiat id aliquam et, dapibus in mauris. Nunc risus mi, egestas sit amet rutrum et, viverra eget augue. Nunc facilisis dictum risus, et facilisis ligula rhoncus nec. Aliquam a augue sit amet sapien pulvinar luctus consectetur et tellus. Fusce ornare orci non augue semper condimentum. Pellentesque felis elit, ullamcorper gravida adipiscing sed, sollicitudin nec odio.</p>
+
+</div>
+
+<div id="footer" class="printPr" style="z-index:100px;position:absolute;">
+<p>This is my sticky footer</p>
+</div>
+</div>
+
+</body>
+</html>

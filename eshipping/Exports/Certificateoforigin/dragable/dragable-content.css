@@ -1,0 +1,51 @@
+/* CSS NEEDED ONLY IN THE DEMO */
+	#mainContainer{
+		width:510px;
+		margin:0 auto;
+		text-align:left;	
+		
+		border:1px solid #317082;
+		padding:5px;
+	}
+	#mainContainer img{
+		padding:3px;
+	}
+	
+	#keyText{
+		float:right;
+		margin-top:5px;
+		margin-top:5px;
+		margin-bottom:5px;
+		border:1px dotted #000;
+		background-color:#E2EBED;
+		width:150px;
+		padding:2px;
+	}
+	
+	#leftMenu{
+		width:145px;
+		float:left;
+		background-color:#E2EBED;
+		border:1px dotted #000;
+		padding:2px;
+		height:300px;
+	}
+	#leftMenu ul{
+		margin:0px;
+	}
+	#leftMenu ul li{
+		list-style-type:none;
+	}
+	#leftMenu ul li a{
+		color:#000;
+		font-weight:bold;
+	}
+	#mainContent{
+		width:345px;
+		float:left;
+		padding-left:10px;
+	}
+	.clear{
+		clear:both;
+	}
+	/* END CSS ONLY NEEDED FOR THE DEMO */

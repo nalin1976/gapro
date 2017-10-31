@@ -1,0 +1,31 @@
+
+<!-- * Slide * -->
+<link rel="stylesheet" href="mootools/Fx.Slide_files/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="mootools/Fx.Slide_files/print.css" type="text/css" media="print">
+<link rel="stylesheet" href="mootools//Fx.Slide_files/main.css" type="text/css" media="screen">
+<link rel="stylesheet" href="mootools//Fx.Slide_files/demo.css" type="text/css">
+<script type="text/javascript" src="mootools//Fx.Slide_files/mootools.js"></script>
+<script type="text/javascript" src="mootools//Fx.Slide_files/site.js"></script>
+<script type="text/javascript"src="mootools//Fx.Slide_files/demo.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+        window.demo_path = 'demos/Fx.Slide/';
+    //]]>
+</script>
+<!-- ** Slide ** -->
+
+=====
+
+<div class="marginbottom">
+          <a id="v_slideout" href="#" name="v_slideout">slide out</a> | <a id="v_slidein" href="#" name="v_slidein">slide in</a> | <a id="v_toggle" href="#" name="v_toggle">toggle</a> | <a id="v_hide" href="#" name="v_hide">hide</a> | <a id="v_show" href="#" name="v_show">show</a> |
+          <strong>status</strong>: <span id="vertical_status">open</span>
+</div>
+
+=====
+
+
+<div id="main" class="column l-border span-19 last demo">
+<div style="margin: 0px; overflow: hidden; position: static;"><div style="margin: 0px;" id="vertical_slide">
+
+</div>
+</div>

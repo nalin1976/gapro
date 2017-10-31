@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tbHead{ font-family:Verdana, Geneva, sans-serif; font-size:10px; font-weight:bold; border:#000 thin solid; background-color:#F93;}
+.tdData { font-family:Verdana, Geneva, sans-serif; font-size:10px; border:#000 thin solid; }
+
+.tbOrderList tr:hover{background-color:#0099FF;}
+#divDelivery{width:380px; height:auto; border:#FB8B1D thin solid; border-radius:5px; overflow:scroll; position:absolute; display:none;}
+
+th{font-family:Verdana, Geneva, sans-serif; font-size:9px; text-align:center;}
+.tbBody{font-family:Verdana, Geneva, sans-serif; font-size:9px; text-align:center;}
+.tdDelivery{background-color:#FFCA95;}
+.newformat{ padding:3px 20px 10px 0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; font-weight:bold; position:absolute;}
+.select-sm{ width:180px; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;font-size:09pt;  }
+.select-md{ width:280px; font-family: Futura, 'Trebuchet MS', Arial, sans-serif;font-size:09pt;}
+
+.td-md{text-align: right;}
+.textformat{font-family: Futura, 'Trebuchet MS', Arial, sans-serif; font-size:09pt; width: 280px;}
+.td-width{width:200px;}
+.div-pad{padding: 20,20,20,20; height: 34px;font-size:10pt;}
+.div-board{border: 1px solid; border-radius: 5px; box-shadow: 5px 4px 3px #888888;}
+.div-header{height: 45px; padding: 12px 12px 12px 12px; background-color:#804000; color:#FFFFFF; font-weight: bold;}
+.div-seperator{height: 60px;}
+.th-lg{font-family:Verdana, Geneva, sans-serif; font-size:12px; text-align:center}
+

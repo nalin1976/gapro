@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<configurations>
+	<companySettings>
+		<NetworkName>oritsl.com</NetworkName>
+		<Declarant>EAM MALIBAN TEXTILES (PVT) LTD</Declarant>
+		<Address>261, SIRI DHAMMA MAWATHA </Address>
+		<City>COLOMBO 10. SRI LANKA</City>
+		<phone>94-11-2668000</phone>
+		<Fax>94-11-2699513</Fax>
+		<bisreg>PV 64804</bisreg>
+		<Email> Califo_logistics@jinadasa.com</Email>
+		<Website>www.jinadasa.com</Website>
+		<Country>SRI LANKA</Country>
+		<CountryCode>LK</CountryCode>
+		<Vat>1141414537000</Vat>
+		<TinNo>114648043-7000</TinNo>
+		<DeclarantsSequenceNo>307/24/04/92</DeclarantsSequenceNo>
+	</companySettings>
+	<importCusdec>
+		<ADNO_Boi>141,741,380.640</ADNO_Boi>
+		<ADNO_Genaral>141/520/760/380/934/935/465</ADNO_Genaral>
+	</importCusdec>
+</configurations>
