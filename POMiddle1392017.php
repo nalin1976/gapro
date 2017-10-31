@@ -10,7 +10,7 @@ include "Connector.php";
 
 header('Content-Type: text/xml'); 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
-
+echo "Test ";
 //$db =new DBManager();
 $userID=$_SESSION["UserID"];
 //$baseCurrID = $_SESSION["sys_currency"];
