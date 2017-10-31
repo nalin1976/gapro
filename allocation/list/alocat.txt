@@ -1,0 +1,6 @@
+Allocation list
+-----------------------------------------------
+
+order no(style No)-from orders tabel
+Bulk Po No-bulk purchase order tabel
+items-bulk grn
